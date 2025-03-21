@@ -187,8 +187,74 @@ console.log(fullStack);
 // Exercise: Level 3
 // The following is an array of 10 students ages: js const ages = [19, 22, 19, 24, 20, 25, 26, 24, 25, 24]  - Sort the array and find the min and max age - Find the median age(one middle item or two middle items divided by two) - Find the average age(all items divided by number of items) - Find the range of the ages(max minus min) - Compare the value of (min - average) and (max - average), use abs() method
 
+const ages = [19, 22, 19, 24, 20, 25, 26, 24, 25, 24, 39];
+ages.sort();
+console.log(ages);
+console.log(
+  `The smallest child is ${ages[0]} years old and the oldest is of ${
+    ages[ages.length - 1]
+  } years old `
+);
+
+if (ages.length % 2 === 0) {
+  console.log(`The medium age is ${ages[ages.length / 2]}`);
+} else {
+  console.log(
+    `The medium age is ${ages[Math.floor(ages.length / 2)]} and ${
+      ages[Math.floor(ages.length / 2) + 1]
+    } years old`
+  );
+}
+
+let sum = 0;
+sum = ages.reduce((acumulator, currentValue) => {
+  return acumulator + currentValue;
+});
+console.log(`The sum of the ages is ${sum}`);
+
+console.log(
+  `The min${ages[0]} out of avg${
+    ages[Math.floor(ages.length / 2)]
+  } is ${Math.abs(ages[0] - ages[Math.floor(ages.length / 2)])} and max ${
+    ages[ages.length - 1]
+  } out of avg ${ages[Math.floor(ages.length / 2)]} is ${Math.abs(
+    ages[0] - ages[Math.floor(ages.length / 2)]
+  )}`
+);
+
 // 1.Slice the first ten countries from the countries array
+
+if (countries.length > 9) {
+  let newList = countries.slice(0, 10);
+  console.log(newList);
+} else {
+  console.log(countries.join(" ").toString());
+}
 
 // Find the middle country(ies) in the countries array
 
 // Divide the countries array into two equal arrays if it is even. If countries array is not even , one more country for the first half.
+console.log(`The length of counteries list ${countries.length}`);
+
+if (countries.length % 2 === 0) {
+  console.log(`The country is even as the module is ${countries.length % 2}`);
+
+  let first = countries.slice(0, Math.floor(countries.length / 2));
+  let second = countries.slice(
+    Math.floor(countries.length / 2),
+    countries.length - 1
+  );
+
+  console.log(`The first half: ${first} and second half is: ${second}`);
+} else {
+  console.log(`The country is odd as the module is ${countries.length % 2}`);
+
+  let first = countries.slice(0, Math.floor(countries.length / 2 + 1));
+  let second = countries.slice(
+    Math.floor(countries.length / 2 + 1),
+    countries.length
+  );
+  console.log(
+    `The first half: ${first.join(", ")} and the second half: ${second}`
+  );
+}
