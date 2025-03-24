@@ -218,36 +218,6 @@ const users2 = [
   },
 ];
 
-const products = [
-  {
-    _id: "eedfcf",
-    name: "mobile phone",
-    description: "Huawei Honor",
-    price: 200,
-    ratings: [
-      { userId: "fg12cy", rate: 5 },
-      { userId: "zwf8md", rate: 4.5 },
-    ],
-    likes: [],
-  },
-  {
-    _id: "aegfal",
-    name: "Laptop",
-    description: "MacPro: System Darwin",
-    price: 2500,
-    ratings: [],
-    likes: ["fg12cy"],
-  },
-  {
-    _id: "hedfcg",
-    name: "TV",
-    description: "Smart TV:Procaster",
-    price: 400,
-    ratings: [{ userId: "fg12cy", rate: 5 }],
-    likes: ["fg12cy"],
-  },
-];
-
 // let userSignUp = prompt("Enter a user name to SignUp");
 let doesExist = false;
 
@@ -313,4 +283,86 @@ function signIn(arr) {
   console.log(`Does ${userName} exist: ${userExist}`);
 }
 
-signIn(users2);
+// signIn(users2);
+
+// The products array has three elements and each of them has six properties.
+// a. Create a function called rateProduct which rates the product
+
+const products = [
+  {
+    _id: "eedfcf",
+    name: "mobile phone",
+    description: "Huawei Honor",
+    price: 200,
+    ratings: [
+      { userId: "fg12cy", rate: 5 },
+      { userId: "zwf8md", rate: 4.5 },
+    ],
+    likes: [],
+  },
+  {
+    _id: "aegfal",
+    name: "Laptop",
+    description: "MacPro: System Darwin",
+    price: 2500,
+    ratings: [],
+    likes: ["fg12cy"],
+  },
+  {
+    _id: "hedfcg",
+    name: "TV",
+    description: "Smart TV:Procaster",
+    price: 400,
+    ratings: [{ userId: "fg12cy", rate: 5 }],
+    likes: ["fg12cy"],
+  },
+];
+
+function rateProduct(arr) {
+  let item;
+  let productRating;
+  for (let product of arr) {
+    item = product.name;
+
+    if (product.ratings.length === 0) {
+      console.log(`${item} is Not rated`);
+      continue;
+    } else {
+      for (let rate of product.ratings) {
+        productRating = rate.rate;
+      }
+    }
+
+    console.log(`The rating of ${item} is ${productRating}`);
+  }
+}
+// rateProduct(products);
+
+// b. Create a function called averageRating which calculate the average rating of a product
+
+function averageRating(arr) {
+  let item,
+    productRating = 0,
+    ratingnum = 0;
+
+  for (let product of arr) {
+    item = product.name;
+
+    if (product.ratings.length === 0) {
+      console.log(`${item} is Not rated`);
+      continue;
+    } else {
+      for (let rate of product.ratings) {
+        productRating = productRating + rate.rate;
+        ratingnum++;
+      }
+      productRating = productRating / ratingnum;
+    }
+
+    console.log(`The average rating of ${item} is ${productRating}`);
+  }
+}
+
+averageRating(products);
+
+// Create a function called likeProduct. This function will helps to like to the product if it is not liked and remove like if it was liked.
