@@ -170,6 +170,11 @@ const personAccount = {
   },
 };
 
+// Imagine you are getting the above users collection from a MongoDB database. a. Create a function called signUp which allows user to add to the collection. If user exists, inform the user that he has already an account.
+
+// The products array has three elements and each of them has six properties. a. Create a function called rateProduct which rates the product b. Create a function called averageRating which calculate the average rating of a product
+
+// Create a function called likeProduct. This function will helps to like to the product if it is not liked and remove like if it was liked.
 const users2 = [
   {
     _id: "ab12ex",
@@ -243,11 +248,69 @@ const products = [
   },
 ];
 
-// Imagine you are getting the above users collection from a MongoDB database. a. Create a function called signUp which allows user to add to the collection. If user exists, inform the user that he has already an account.
+// let userSignUp = prompt("Enter a user name to SignUp");
+let doesExist = false;
+
+function signUp(arr) {
+  for (let user of arr) {
+    console.log(`The userName is now ${user.username}`);
+
+    if (user.username === userSignUp) {
+      alert("User already exist");
+      doesExist = true;
+    } else {
+      console.log(`User dosent exist`);
+
+      doesExist = false;
+    }
+  }
+
+  if (!doesExist) {
+    arr.push({
+      id: prompt("Enter a new user ID:"),
+      name: userSignUp,
+      email: prompt("Enter your mail"),
+      password: prompt("Enter a password"),
+      createdAt: new Date(),
+      isLoggedIn: true,
+    });
+
+    console.log(arr[arr.length - 1]);
+    console.log(arr);
+  }
+}
+
+// signUp(users2);
+
 // b. Create a function called signIn which allows user to sign in to the application
 
-// The products array has three elements and each of them has six properties. a. Create a function called rateProduct which rates the product b. Create a function called averageRating which calculate the average rating of a product
+function signIn(arr) {
+  let userExist = false;
+  let pass = "";
+  let userName = prompt("Enter your user name:");
+  for (let user of arr) {
+    console.log(user);
+    console.log(`${user.username} is trying ${userName}`);
+    if (user.username === userName) {
+      userExist = true;
+      pass = user.password;
+      break;
+    } else {
+      userExist = false;
+    }
+  }
+  if (userExist) {
+    let userPassword = prompt(`Enter your password:`);
+    if (userPassword === pass) {
+      alert("Logged in sucessfully");
+    } else {
+      alert("Bad credientials");
+    }
+  } else {
+    alert("User dosent exist sign in first");
+  }
 
-// Create a function called likeProduct. This function will helps to like to the product if it is not liked and remove like if it was liked.
+  console.log(`Does ${userName} exist: ${userExist}`);
+}
 
-function signUp() {}
+signIn(users2);
