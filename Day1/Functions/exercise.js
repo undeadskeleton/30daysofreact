@@ -161,3 +161,107 @@ function swapValues(a, b) {
 }
 
 console.log(swapValues(4, 1).forEach((item) => console.log(item)));
+
+// Declare a function name reverseArray. It takes array as a parameter and it returns the reverse of the array (don't use method).
+
+function reverseArray(arr) {
+  let revArr = [];
+  for (let i = arr.length - 1; i >= 0; i--) {
+    revArr.push(arr[i]);
+  }
+
+  return revArr;
+}
+
+console.log(reverseArray([1, 2, 3, 4, 5]));
+
+// Declare a function name capitalizeArray. It takes array as a parameter and it returns the - capitalizedarray.
+
+function capitalizeArray(arr) {
+  let newArr = [];
+  for (let ele of arr) {
+    newArr.push(ele.charAt(0).toUpperCase() + ele.slice(1));
+  }
+
+  return newArr;
+}
+
+console.log(capitalizeArray(["sam", "onion", "tomate"]));
+// Declare a function name evensAndOdds . It takes a positive integer as parameter and it counts number of evens and odds in the number.
+
+function evensAndOdds(a) {
+  let len = a.toString().length;
+  let numArr = [];
+  for (let i = 0; i < len; i++) {
+    numArr[i] = a % 10;
+    console.log(`The number at index ${i} is  ${numArr[i]}`);
+
+    a = (a / 10) | 0;
+    console.log(`After divingin by 10 a is ${a}`);
+  }
+
+  numArr.reverse();
+  let even = 0,
+    odd = 0;
+
+  for (let num of numArr) {
+    if (num % 2 === 0) {
+      even++;
+    } else {
+      odd++;
+    }
+  }
+
+  return [even, odd];
+}
+
+const [even, odd] = evensAndOdds(1334);
+
+console.log(
+  `The number of even number is ${even} and number of odd number is ${odd}`
+);
+
+function evensAndOdds2(a) {
+  let even = 0,
+    odd = 0;
+  for (let i = 0; i < a; i++) {
+    if (i % 2 === 0) {
+      even++;
+    } else {
+      odd++;
+    }
+  }
+
+  return [even, odd];
+}
+
+const [even2, odd2] = evensAndOdds2(100);
+
+console.log(`The number of even are ${even2}\n The number of odd are ${odd2}`);
+
+//Write a function which takes any number of arguments and return the sum of the arguments
+
+function sum2() {
+  let result = 0;
+  for (let num of arguments) {
+    result += num;
+  }
+
+  return result;
+}
+
+console.log(sum2(1, 2, 3, 4));
+//Declare a function name userIdGenerator. When this function is called it generates seven character id. The function return the id.
+
+function userIdGenerator(len = 7) {
+  let randomchar = "1234567890ABCDEFGHIJKLMNOPabcdefghijklmnop";
+  let randomId = "";
+  for (let i = 1; i <= 7; i++) {
+    randomId += randomchar.charAt(
+      Math.floor(Math.random() * randomchar.length)
+    );
+  }
+  return randomId;
+}
+
+console.log(userIdGenerator());
