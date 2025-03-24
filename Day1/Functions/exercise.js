@@ -104,3 +104,60 @@ function checkSeason(month) {
 }
 
 console.log(checkSeason("January"));
+// Quadratic equation is calculated as follows: ax2 + bx + c = 0. Write a function which calculates value or values of a quadratic equation, solveQuadEquation.
+
+function solveQuadratic(a = 0, b = 0, c = 0) {
+  if (a === 0 && b === 0 && c === 0) {
+    return 0;
+  } else {
+    return [
+      ((-b + Math.sqrt(b * b - 4 * a * c)) / 2) * a,
+      ((-b - Math.sqrt(b * b - 4 * a * c)) / 2) * a,
+    ];
+  }
+}
+console.log(solveQuadratic()); // {0}
+console.log(solveQuadratic(1, 4, 4)); // {-2}
+console.log(solveQuadratic(1, -1, -2)); // {2, -1}
+console.log(solveQuadratic(1, 7, 12)); // {-3, -4}
+console.log(solveQuadratic(1, 0, -4)); //{2, -2}
+console.log(solveQuadratic(1, -1, 0)); //{1, 0}
+
+// Declare a function name printArray. It takes array as a parameter and it prints out each value of the array.
+
+function printArray(arr) {
+  for (let ele of arr) {
+    console.log(ele);
+  }
+}
+
+console.log(
+  printArray([
+    "aryt",
+    23,
+    423.3,
+    { id: "undead", age: 23, email: "userID@gmail.com" },
+  ])
+);
+
+// Write a function name showDateTime which shows time in this format: 08/01/2020 04:08 using the Date object.
+
+function showDateTime() {
+  const now = new Date();
+  console.log(
+    `${now.toLocaleDateString()} ${now.getHours()}:${now.getMinutes()}`
+  );
+}
+
+showDateTime();
+
+// Declare a function name swapValues. This function swaps value of x to y.
+
+function swapValues(a, b) {
+  a = a + b;
+  b = a - b;
+  a = a - b;
+  return [a, b];
+}
+
+console.log(swapValues(4, 1).forEach((item) => console.log(item)));
