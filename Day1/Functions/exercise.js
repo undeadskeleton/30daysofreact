@@ -342,9 +342,12 @@ function shuffleArray(arr) {
       continue;
     }
 
-    arr[i] = arr[i] + arr[randomIndex];
-    arr[randomIndex] = arr[i].slice(0, arr[i].length - arr[randomIndex].length);
-    arr[i] = arr[i].slice(arr[randomIndex].length);
+    //By using numeric
+    // arr[i] = arr[i] + arr[randomIndex];
+    // arr[randomIndex] = arr[i].slice(0, arr[i].length - arr[randomIndex].length);
+    // arr[i] = arr[i].slice(arr[randomIndex].length);
+
+    [arr[i], arr[randomIndex]] = [arr[randomIndex], arr[i]];
   }
 
   return arr;
@@ -369,3 +372,69 @@ function average(arr) {
 }
 
 console.log(average([12, 24, 4, 50]));
+
+//Destucturing array
+const fullStack = [
+  ["HTML", "CSS", "JS", "React"],
+  ["Node", "Express", "MongoDB"],
+];
+
+for (const [first, second, third, fourth] of fullStack) {
+  console.log(first, second, third, fourth);
+}
+
+const [x, y] = [2, (value) => value ** 2];
+
+console.log(x, y(x));
+
+// Create a function called getPersonInfo. The getPersonInfo function takes an object parameter. The structure of the object and the output of the function is given below. Try to use both a regular way and destructuring and compare the cleanness of the code. If you want to compare your solution with my solution, check this link.
+
+const person = {
+  firstName: "Asabeneh",
+  lastName: "Yetayeh",
+  age: 250,
+  country: "Finland",
+  job: "Instructor and Developer",
+  skills: [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "React",
+    "Redux",
+    "Node",
+    "MongoDB",
+    "Python",
+    "D3.js",
+  ],
+  languages: ["Amharic", "English", "Suomi(Finnish)"],
+};
+
+console.log(
+  `${person.firstName} ${person.lastName} lives in ${person.country}.He is ${
+    person.age
+  } years old.He is Instructor and Developer.He teaches ${person.skills.slice(
+    0,
+    person.skills.length - 1
+  )} and ${
+    person.skills[person.skills.length - 1]
+  } .He speaks ${person.languages.slice(
+    0,
+    person.languages.lenght - 1
+  )} and a little bit of ${person.languages[person.languages.length - 1]}.`
+);
+
+const { firstName, lastName, age, country, job, skills, languages } = person;
+
+console.log(
+  `${firstName} ${lastName} lives in ${country}.He is ${age} years old.He is an ${job}.He teaches ${skills.slice(
+    0,
+    skills.length - 1
+  )}  and ${skills[skills.length - 1]}.He speaks ${languages.slice(
+    0,
+    languages.lenght - 1
+  )} and a little bit of ${languages[languages.length - 1]}`
+);
+
+/*
+Asabeneh Yetayeh lives in Finland. He is  250 years old. He is an Instructor and Developer. He teaches HTML, CSS, JavaScript, React, Redux, Node, MongoDB, Python and D3.js. He speaks Amharic, English and a little bit of Suomi(Finnish)
+*/
