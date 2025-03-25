@@ -286,4 +286,49 @@ function userIdGeneratedByUser() {
   return id;
 }
 
-alert(userIdGeneratedByUser());
+// alert(userIdGeneratedByUser());
+
+// Write a function generateColors which can generate any number of hexa or rgb colors.
+
+function generateColors(type, noOfColor) {
+  let generatedColor = "";
+  let hexastr = "1234567890abcdef";
+  let ColorGroup = [];
+  if (type.toLowerCase() === "hexa") {
+    for (let j = 0; j < noOfColor; j++) {
+      generatedColor += "#";
+      for (let i = 0; i < 6; i++) {
+        generatedColor += hexastr.charAt(
+          Math.floor(Math.random() * hexastr.length)
+        );
+      }
+      ColorGroup[j] = generatedColor;
+      generatedColor = "";
+    }
+
+    return ColorGroup;
+  } else if (type.toLowerCase() === "rgb") {
+    for (let i = 0; i < noOfColor; i++) {
+      generatedColor = "rgb(";
+      console.log(generatedColor);
+
+      for (let j = 0; j < 3; j++) {
+        generatedColor = generatedColor.concat(Math.floor(Math.random() * 255));
+        console.log(generatedColor);
+        if (j === 2) {
+          console.log(`The j is ${j}`);
+
+          generatedColor += ")";
+        } else {
+          generatedColor += ",";
+        }
+      }
+      ColorGroup[i] = generatedColor;
+      generatedColor = "";
+    }
+
+    return ColorGroup;
+  }
+}
+
+console.log(generateColors("rgb", 3));
