@@ -326,9 +326,28 @@ function generateColors(type, noOfColor) {
       ColorGroup[i] = generatedColor;
       generatedColor = "";
     }
-
     return ColorGroup;
   }
 }
 
 console.log(generateColors("rgb", 3));
+
+// Call your function shuffleArray, it takes an array as a parameter and it returns a shuffled array
+
+function shuffleArray(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    let randomIndex = Math.floor(Math.random() * arr.length);
+
+    if (randomIndex === i) {
+      continue;
+    }
+
+    arr[i] = arr[i] + arr[randomIndex];
+    arr[randomIndex] = arr[i].slice(0, arr[i].length - arr[randomIndex].length);
+    arr[i] = arr[i].slice(arr[randomIndex].length);
+  }
+
+  return arr;
+}
+
+console.log(shuffleArray(["apple", "banana", "orange", "pear", "tomato"]));
