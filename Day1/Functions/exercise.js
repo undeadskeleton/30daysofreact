@@ -351,3 +351,21 @@ function shuffleArray(arr) {
 }
 
 console.log(shuffleArray(["apple", "banana", "orange", "pear", "tomato"]));
+
+// Write a function called average, it takes an array parameter and returns the average of the items. Check if all the array items are number types. If not give return reasonable feedback.
+
+function average(arr) {
+  let avg = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (typeof arr[i] !== "number") {
+      return "Sry the array dosent contain all numbers";
+      break;
+    } else {
+      avg += arr[i];
+    }
+  }
+
+  return avg / arr.length;
+}
+
+console.log(average([12, 24, 4, 50]));
