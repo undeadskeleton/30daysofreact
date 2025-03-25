@@ -265,3 +265,25 @@ function userIdGenerator(len = 7) {
 }
 
 console.log(userIdGenerator());
+
+// Declare a function name userIdGeneratedByUser. It doesn’t take any parameter but it takes two inputs using prompt(). One of the input is the number of characters and the second input is the number of ids which are supposed to be generated.
+
+function userIdGeneratedByUser() {
+  let len = prompt("Enter the length of the Id ");
+  let noOfId = prompt("Enter the no of Id needed to be generated");
+  let str = "0123456789ABCDEFGHIFKLMNOPabcdefghijklmnop";
+  let id = "";
+
+  for (let i = 0; i < noOfId; i++) {
+    for (let j = 0; j < len; j++) {
+      id += str.charAt(Math.round(Math.random() * str.length));
+      if (j === len - 1) {
+        id += "\n";
+      }
+    }
+  }
+
+  return id;
+}
+
+alert(userIdGeneratedByUser());
