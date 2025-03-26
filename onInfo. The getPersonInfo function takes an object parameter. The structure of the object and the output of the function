@@ -1,0 +1,131 @@
+[33mcommit f6a30dcfe6c6183cf230e9503ea86f50ad1a6e88[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: undeadskeleton <safepeople@gmail.com>
+Date:   Tue Mar 25 23:09:37 2025 +0530
+
+    understanding spread operator and how to destructuring object
+
+[33mcommit 535bc2b39f6456863e47e65ac99895eee26730f8[m
+Author: undeadskeleton <safepeople@gmail.com>
+Date:   Tue Mar 25 22:35:48 2025 +0530
+
+    generic average function created
+
+[33mcommit 54f9f9377df628490e7ec532164b80b07d125ef8[m
+Author: undeadskeleton <safepeople@gmail.com>
+Date:   Tue Mar 25 22:23:07 2025 +0530
+
+    created an function that shuffles the content of an array
+
+[33mcommit 1269c921fa92a8fd4a987ed5caa6198cb5140722[m
+Author: undeadskeleton <safepeople@gmail.com>
+Date:   Tue Mar 25 21:59:21 2025 +0530
+
+    created an function to generate user desired random hexa or rgb color code
+
+[33mcommit 6579a8bcd052787405d6ff2ae557df5bb91b68b8[m
+Author: undeadskeleton <safepeople@gmail.com>
+Date:   Tue Mar 25 21:32:46 2025 +0530
+
+    Made a userIdGenerator which generates a id of  user Choice and the no of id user wants
+
+[33mcommit e57aca415ef56b7cc19f1041f27a3d1c6b667c60[m
+Author: undeadskeleton <safepeople@gmail.com>
+Date:   Mon Mar 24 20:42:50 2025 +0530
+
+    finished creating random ID generator
+
+[33mcommit ddf949261077ec1ee5c8d6e1521c48472edbade4[m
+Author: undeadskeleton <safepeople@gmail.com>
+Date:   Mon Mar 24 19:09:12 2025 +0530
+
+    Wrote a function to swap variables
+
+[33mcommit 4fe0434fb2419ca47ab2aaca485d9892f4c6ade4[m
+Author: undeadskeleton <safepeople@gmail.com>
+Date:   Mon Mar 24 18:05:44 2025 +0530
+
+    Finished exercise 2 of Function
+
+[33mcommit e7b30ce6104fe662f0bb57bf23ccb022993c129d[m
+Author: undeadskeleton <safepeople@gmail.com>
+Date:   Mon Mar 24 16:33:06 2025 +0530
+
+    learning functions
+
+[33mcommit 42c5da6793eb5f34d7241d9385b546edc50fbe5f[m
+Author: undeadskeleton <safepeople@gmail.com>
+Date:   Mon Mar 24 14:00:31 2025 +0530
+
+    complete object exercise
+
+[33mcommit 7b5cca11727c3d413f49146d45b7484ef69d51a0[m
+Author: undeadskeleton <safepeople@gmail.com>
+Date:   Mon Mar 24 13:18:58 2025 +0530
+
+    solved the problem of finding a user if it exist and them ask for login password
+
+[33mcommit e95c878739ae94bc527ccd9d0a41f6d363bd77ce[m
+Author: undeadskeleton <safepeople@gmail.com>
+Date:   Sun Mar 23 23:13:39 2025 +0530
+
+    started exercise 3 of object
+
+[33mcommit f9266d5e2debd42bea468d0f5bbc05ecd055103e[m
+Author: undeadskeleton <safepeople@gmail.com>
+Date:   Sat Mar 22 13:16:36 2025 +0530
+
+    Finished Object Exerscise 2
+
+[33mcommit d00227a27177eeb1c2f6e8fefdb584c67709f928[m
+Author: undeadskeleton <safepeople@gmail.com>
+Date:   Fri Mar 21 16:22:58 2025 +0530
+
+    Finished lessons
+
+[33mcommit 200de99936103f5be754eea3d02a53e572462387[m
+Author: undeadskeleton <safepeople@gmail.com>
+Date:   Fri Mar 21 15:08:28 2025 +0530
+
+    understanding object and how to acess values out of object
+
+[33mcommit e5fccd1a07fe339ff4af1959f8e108944182449a[m
+Author: undeadskeleton <safepeople@gmail.com>
+Date:   Fri Mar 21 10:50:23 2025 +0530
+
+    complete conditionals exercises
+
+[33mcommit ab0642b28b0dea2dee7c25950908dbbe8383acb5[m
+Author: undeadskeleton <safepeople@gmail.com>
+Date:   Fri Mar 21 09:43:01 2025 +0530
+
+    starting conditionals exercise
+
+[33mcommit e5672b35149979f75386c78642465bfad5073329[m
+Author: undeadskeleton <safepeople@gmail.com>
+Date:   Fri Mar 21 09:37:29 2025 +0530
+
+    moving to array folder
+
+[33mcommit 07417a43597c7ec6ab52cf2cf5e34be25b9ac189[m
+Author: undeadskeleton <safepeople@gmail.com>
+Date:   Fri Mar 21 09:35:28 2025 +0530
+
+    complete the array exercise
+
+[33mcommit d6a67b4020fbc6749ed239420ddce0fd8608d446[m
+Author: undeadskeleton <safepeople@gmail.com>
+Date:   Tue Mar 18 16:37:36 2025 +0530
+
+    Array exercise done
+
+[33mcommit 3985e176fb264c2201d410ee854a3852069a80e3[m
+Author: undeadskeleton <safepeople@gmail.com>
+Date:   Tue Mar 18 13:30:01 2025 +0530
+
+    moved to day1
+
+[33mcommit 3b3ab49ceff70da9c19c9f11b2232f7b8abd8bc9[m
+Author: undeadskeleton <safepeople@gmail.com>
+Date:   Tue Mar 18 13:29:14 2025 +0530
+
+    first commit
