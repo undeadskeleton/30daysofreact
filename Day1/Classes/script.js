@@ -165,6 +165,8 @@ class Animal {
     return info;
   }
 }
+// Create a Dog and Cat child class from the Animal Class.
+// Override the method you create in Animal class
 
 class Cat extends Animal {
   constructor(name, age, color, legs, type) {
