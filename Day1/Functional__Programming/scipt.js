@@ -146,12 +146,15 @@ console.log(
   )} dosent have price`
 );
 
+// Check if some products do not have a price value
+
 if (products.some((p) => p.price === "" || p.price === " ")) {
   console.log(`Some of the products dosent have prices`);
 } else {
   console.log(`Every products has prices`);
 }
 
+// Check if all the products have price value
 if (products.every((p) => p.price !== "" && p.price !== " ")) {
   console.log(`Every product has prices`);
 } else {
