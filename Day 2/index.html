@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React Introduction</title>
+    <style>
+        ul li {
+            list-style: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="root"></div>
+
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+
+    <script type="text/babel">
+
+        console.log(React);
+
+        const rootElement = document.querySelector(".root");
+
+        const jsxElement = <h1>I am a JSX element</h1>
+
+        const headerStyle = {
+            backgroundColor: '#61DBFB',
+            fontFamily: 'Sans serif',
+            padding: 25,
+            lineHeight: 1.5
+        }
+
+        const welcome = 'Welcome to 30 Days Of React'
+        const title = 'Getting Started React'
+        const subtitle = 'JavaScript Library'
+        const author = {
+            firstName: 'Jushoin',
+            lastName: 'Huttu'
+        }
+        const date = 'Oct 1, 2020'
+        const tech = ['HTML', 'CSS', 'JavsScript']
+        const techFormatedd = tech.map((t) => <li>{t}</li>)
+
+
+        const header = (
+            <header style={headerStyle}>
+                <h1>{welcome}</h1>
+                <h2>{title}</h2>
+                <h3>{subtitle}</h3>
+                <p>Instructor:{author.firstName} {author.lastName}</p>
+                <small>Date: {date}</small>
+            </header>
+        )
+
+
+        const mainStyle = {
+            backgroundColor: '#F3F0F5',
+        }
+        const main = (
+            <main style={mainStyle}>
+                <p>Prerequisite to get started react.js:</p>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li><em>React.js</em></li>
+                </ul>
+
+                <ul>
+                    {techFormatedd}
+                </ul>
+
+            </main>
+        )
+
+        const inputField = (
+            <div>
+                <label htmlFor='firstName'>First Name:</label>
+                <input type='text' id='firstName' placeholder='First Name' />
+            </div>
+        )
+
+        const numOne = 3
+        const numTwo = 2
+        const yearBord = 1998;
+        const currentYear = new Date().getFullYear()
+        const age = currentYear - yearBord;
+        const personAge = <p>Person age: {age} </p>
+
+        const result = (
+            <p>
+                {numOne} + {numTwo} = {numOne + numTwo}
+            </p>
+        )
+
+
+
+        const footerStyle = { backgroundColor: '#61DBFB' }
+        const footer = (
+            <footer style={footerStyle}>
+                <p>Copyright 2020</p>
+            </footer>
+        )
+
+        const app =
+            (<div>
+                {header}
+                {main}
+                {inputField}
+                {result}
+                {personAge}
+                {footer}
+            </div>)
+
+
+
+        ReactDOM.render(jsxElement, rootElement)
+        ReactDOM.render(header, rootElement)
+        ReactDOM.render(app, rootElement)
+
+    </script>
+</body>
+
+</html>
