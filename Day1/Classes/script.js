@@ -141,3 +141,64 @@ console.log(s2);
 s2.saySomething();
 console.log(s2.getFullName());
 console.log(s2.getPersonalInfo());
+
+// Create an Animal class. The class will have name, age, color, legs properties and create different methods
+class Animal {
+  constructor(name, age, color, legs) {
+    this.name = name;
+    this.age = age;
+    this.color = color;
+    this.legs = legs;
+  }
+
+  set setColor(color) {
+    this.color = color;
+  }
+
+  getAnimalInfo() {
+    let type = this.legs < 4 ? true : false;
+    let typeOfAnimal = type
+      ? `walk on two and is bipedal`
+      : ` walks on four and is quadpedal`;
+    let info = `${this.name} is a ${this.color} animal and ${typeOfAnimal} and ${this.age} old`;
+
+    return info;
+  }
+}
+
+class Cat extends Animal {
+  constructor(name, age, color, legs, type) {
+    super(name, age, color, legs);
+    this.type = type;
+  }
+  getColor() {
+    console.log(`The cat is ${this.color}`);
+  }
+
+  getAnimalInfo() {
+    let animalType = this.type === "cat" ? `cat` : "dog";
+    let type = this.legs < 4 ? true : false;
+    let typeOfAnimal = type
+      ? `walk on two and is bipedal`
+      : ` walks on four and is quadpedal`;
+    let info = `${this.name} is a ${this.color} ${animalType} and ${typeOfAnimal} and ${this.age} old`;
+
+    return info;
+  }
+}
+
+class Dog extends Animal {
+  constructor(name, age, color, legs, type) {
+    super(name, age, color, legs);
+    this.type = type;
+  }
+
+  getColor() {
+    console.log(`The cat is ${this.color}`);
+  }
+}
+
+const cat1 = new Cat("Tommy", 3, "black", 4, "cat");
+
+console.log(cat1.getAnimalInfo());
+cat1.getColor();
