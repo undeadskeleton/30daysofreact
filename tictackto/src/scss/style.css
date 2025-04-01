@@ -1,0 +1,22 @@
+.board_container {
+  border: 1px solid black;
+  padding: 10px;
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: 0 auto;
+}
+.board_container .square {
+  background-color: beige;
+  color: bisque;
+  padding: 10px 15px;
+  margin: 1px;
+  font-size: 2rem;
+  width: 50px;
+  height: 50px;
+}
+.board_container .square:hover {
+  background-color: azure;
+  color: black;
+}/*# sourceMappingURL=style.css.map */

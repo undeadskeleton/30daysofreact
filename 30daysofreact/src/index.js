@@ -75,6 +75,19 @@ const main = (
   </main>
 );
 
+const form = (
+  <form method="submit">
+    <h2>SUBSCRIBE</h2>
+    <h4>Sign up with your email address to receive news and updates</h4>
+    <div>
+      <input type="text" placeholder="First Name" required></input>
+      <input type="text" placeholder="Last Name" required></input>
+      <input type="email" placeholder="Email" required></input>
+    </div>
+    <button>Subscribe</button>
+  </form>
+);
+
 const copyRight = "CopyRight 2020";
 
 const footer = (
@@ -87,6 +100,7 @@ const app = (
   <div>
     {header}
     {main}
+    {form}
     {footer}
   </div>
 );
