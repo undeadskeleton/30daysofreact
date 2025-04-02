@@ -29,6 +29,11 @@ function App() {
     passwordGenerator();
   }, [length, numberAllowed, charaterAllowed, passwordGenerator]);
 
+  const copyToClipBoard = useCallback(() => {
+    passwordRef.current?.select();
+    window.navigator.clipboard.writeText(password);
+  }, [password]);
+
   return (
     <>
       <div className="bg-blue-300 w-2xl mx-auto my-4 py-6  px-8 rounded-lg">
@@ -41,6 +46,7 @@ function App() {
             value={password}
             placeholder="Password"
             className="py-4 px-5 bg-white w-full"
+            ref={passwordRef}
           />
           <button
             className="px-6 bg-blue-500 text-white"
