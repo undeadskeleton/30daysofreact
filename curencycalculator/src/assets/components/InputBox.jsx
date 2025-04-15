@@ -8,9 +8,9 @@ function InputBox({
   changeDisabled = false,
   amount,
   onCurrencyChange,
+  selectedCurrency,
 }) {
   const currId = useId();
-  const [selectedCurrency, setSelectedCurrency] = useState("inr");
 
   return (
     <div className="flex justify-center gap-10 border-2 ">
@@ -30,10 +30,7 @@ function InputBox({
           name=""
           id=""
           value={selectedCurrency}
-          onChange={(e) => {
-            console.log("The currency is :", onCurrencyChange(e.target.value));
-            return onCurrencyChange && onCurrencyChange(e.target.value);
-          }}
+          onChange={(e) => onCurrencyChange && onCurrencyChange(e.target.value)}
         >
           {options.map((curr) => (
             <option value={curr} key={curr}>
