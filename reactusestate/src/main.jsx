@@ -1,81 +1,15 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
-// import App from "./App.jsx";
+import App from "./App.jsx";
+import User from "./assets/mistakes_made_hooks/objectPassing.jsx";
+import Cart from "./assets/information_from_state/infofromstateorprops.jsx";
+import Price from "./assets/primitiveandnonprimitives/priandnonpri.jsx";
+import Blog from "./assets/initwithobj/initwithobj.jsx";
+import ComponentExample1 from "./assets/custom hooks/customhook.jsx";
 
-let callIndex = -1;
-const stateValues = [];
-
-const useState = (initialValue) => {
-  callIndex++;
-
-  const currentCallIndex = Number(callIndex);
-
-  if (stateValues[currentCallIndex] === undefined) {
-    stateValues[currentCallIndex] = initialValue;
-  }
-
-  const setValue = (newValue) => {
-    stateValues[currentCallIndex] = newValue;
-    renderApp();
-    console.log("Newvalue", newValue);
-  };
-
-  return [stateValues[currentCallIndex], setValue];
-};
-
-const App = () => {
-  const [countA, setCountA] = useState(34);
-  const [countB, setCountB] = useState(-1);
-
-  return (
-    <div className="flex items-center border py-3 px-3 justify-center">
-      <div className="mx-4">
-        <h1>Count A:{countA}</h1>
-        <button
-          className="mx-2"
-          type="button"
-          onClick={() => setCountA(countA - 1)}
-        >
-          Substract
-        </button>
-        <button
-          className="mx-2"
-          type="button"
-          onClick={() => setCountA(countA + 1)}
-        >
-          Add
-        </button>
-      </div>
-
-      <div>
-        <h1>Count B:{countB}</h1>
-        <button
-          className="mx-2"
-          type="button"
-          onClick={() => setCountB(countB - 1)}
-        >
-          Substract
-        </button>
-        <button
-          className="mx-2"
-          type="button"
-          onClick={() => setCountB(countB + 1)}
-        >
-          Add
-        </button>
-      </div>
-    </div>
-  );
-};
-
-const renderApp = () => {
-  callIndex = -1;
-  createRoot(document.getElementById("root")).render(
-    <StrictMode>
-      <App />
-    </StrictMode>
-  );
-};
-
-renderApp();
+createRoot(document.getElementById("root")).render(
+  <StrictMode>
+    <ComponentExample1 />
+  </StrictMode>
+);

@@ -32,3 +32,4 @@ console.log(bolleanIsLoggedIn);
 // NaN => false
 //[]=> true
 //{}=> true
+//()=>{}=> true
