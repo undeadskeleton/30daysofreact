@@ -4,7 +4,7 @@ function About() {
   const data = useLoaderData();
 
   return (
-    <div className="flex">
+    <div className="flex mt-10 mb-5">
       <div className="flex-1 flex justify-center">
         <img src={data.avatar_url} alt="Git picture" width={200} />
       </div>

@@ -2,7 +2,7 @@ import { Link, NavLink } from "react-router-dom";
 
 function Header() {
   return (
-    <header className="shadow sticky z-50 top-0 ">
+    <header className="shadow sticky z-50 top-0 w-full max-w-screen-xl">
       <nav className="bg-white border-gray-200 px-5 lg:px-6 py-2.5">
         <div className="flex flex-wrap justify-between item-center mx-auto max-w-screen-xl">
           <Link>
@@ -69,6 +69,20 @@ function Header() {
                   }
                 >
                   Contact Us
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/github"
+                  className={({ isActive }) =>
+                    `block py-2 px-3 duration-200 ${
+                      isActive
+                        ? "text-orange-700 bg-orange-50 rounded-lg"
+                        : "text-gray-100"
+                    } border-b border-gray-100 lg:hover-bg-transparent`
+                  }
+                >
+                  Github
                 </NavLink>
               </li>
             </ul>
