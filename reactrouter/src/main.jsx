@@ -1,6 +1,7 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
+
 import {
   BrowserRouter,
   createBrowserRouter,
@@ -8,6 +9,7 @@ import {
   Route,
   RouterProvider,
 } from "react-router-dom";
+
 import Layout from "./Layout.jsx";
 import Home from "./components/home/Home.jsx";
 import About from "./components/about/about.jsx";

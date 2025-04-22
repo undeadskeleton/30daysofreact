@@ -18,10 +18,10 @@ function Footer() {
             <h2 className="font-semibold">RESOURCES</h2>
             <ul className="flex flex-col gap-3">
               <li>
-                <Link>Home</Link>
+                <Link to="/">Home</Link>
               </li>
               <li>
-                <Link>About</Link>
+                <Link to="/about">About</Link>
               </li>
             </ul>
           </div>
@@ -29,7 +29,7 @@ function Footer() {
             <h2 className="font-semibold">FOLLOW US</h2>
             <ul className="flex flex-col gap-3">
               <li>
-                <Link>Github</Link>
+                <Link to="/github">Github</Link>
               </li>
               <li>
                 <Link>Discord</Link>
